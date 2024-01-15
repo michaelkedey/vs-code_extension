@@ -1,0 +1,13 @@
+create table 
+ (
+    Column1 Type,
+    Column2 Type
+);
+
+insert into TableName (
+    Column1,
+    Column2
+) values (
+    Value1,
+    Value2
+);

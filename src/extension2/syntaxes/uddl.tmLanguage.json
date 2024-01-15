@@ -1,0 +1,77 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "uddl",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#identifiers"
+		},
+		{
+			"include": "#numbers"
+		},
+		{
+			"include": "#types"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.control.uddl",
+				"match": "\\b(if|while|for|return|create|table|insert|delete|aconv|arr|basis|bool|cassoc|ccquery|cdm|centity|char|conv|coord|cquery|csa|dm|domain|double|ec|enum|float|flsc|include|int|irc|isUnion|landmark|lassoc|lcquery|ldm|ldouble|lentity|llong|long|lquery|lunit|maxis|mc|meas|msa|msc|msys|nat|observable|octet|passoc|pcquery|pdm|pentity|pquery|real|rec|rrc|seq|short|smsys|str|string|struct|ullong|ulong|ushort|vtu|wchar)\\b|\\b(angleEq:|axis:|basis:|char\\[|coord:|distanceEq:|eqn:|extRefStd:|fixed\\[|landmark:|loss:|maxis:|msaxis:|orient:|participants:|path:|prec:|real\\+|refPt:|refStd:|source:|spec:|src:|stdRef:|string\\[|sys:|vtu)\\b"
+			}]
+		},
+		"comments": {
+			"patterns": [
+			  {
+				"match": "--.*?$",
+				"name": "comment.line.double-dash.uddl"
+			  }
+			]
+		  },
+		"identifiers": {
+			"patterns": [
+			  {
+				"match": "\\b[a-zA-Z_][a-zA-Z0-9_]*\\b",
+				"name": "variable.uddl"
+			  }
+			]
+		  },
+		  "strings": {
+			"patterns": [
+			  {
+				"match": "'[^']*'",
+				"name": "string.single-quote.uddl"
+			  },
+			  {
+				"match": "\"[^\"]*\"",
+				"name": "string.double-quote.uddl"
+			  }
+			]
+		  },
+		"numbers": {
+			"patterns": [
+			  {
+				"match": "\\b\\d+\\b",
+				"name": "constant.numeric.uddl"
+			  }
+			]
+		  },
+		  "types": {
+			"patterns": [
+			  {
+				"match": "\\b(string|integer|boolean)\\b",
+				"name": "support.type.uddl"
+			  }
+			]
+		  }
+	},
+	"scopeName": "source.uddl"
+}

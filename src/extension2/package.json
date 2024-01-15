@@ -1,0 +1,84 @@
+{
+  "name": "uddl",
+  "displayName": "Epistimis",
+  "description": "Universal Data Definition Language from FACE (Future Airborne Capability Environment) Consortium)",
+  "version": "0.0.1",
+  "publisher": "Epistimis LLC",
+  "icon": "./images/epistimis.png",
+  "files": [
+    "../com.epistimis.uddl.query.parent",
+    "./images/epistimis.png",
+    "bin",
+    "out"
+  ],
+  "engines": {
+    "vscode": "^1.60.0"
+  },
+  "bin": {
+    "universal-data-definition-language-cli": "./bin/cli"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "activationEvents": [
+    "onLanguage:uddl"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "uddl.helloWorld",
+        "title": "Hello World"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "uddl",
+        "scopeName": "source.uddl",
+        "path": "./syntaxes/uddl.tmLanguage.json"
+      }
+    ],
+    "snippets": [
+      {
+        "language": "uddl",
+        "path": "./snippets/snippets.code-snippets"
+      }
+    ],
+    "languages": [
+      {
+        "id": "uddl",
+        "aliases": [
+          "uddl",
+          "uddl"
+        ],
+        "extensions": [
+          ".uddl"
+        ],
+        "configuration": "./language-configuration.json",
+        "path": "./out/language_server_extension/extension.js"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p tsconfig.json",
+    "watch": "tsc -watch -p tsconfig.json",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.6",
+    "@types/node": "^20.10.4",
+    "@types/vscode": "^1.60.0",
+    "@typescript-eslint/eslint-plugin": "^6.13.1",
+    "@typescript-eslint/parser": "^6.13.1",
+    "@vscode/test-cli": "^0.0.4",
+    "@vscode/test-electron": "^2.3.8",
+    "esbuild": "^0.19.9",
+    "eslint": "^8.54.0",
+    "langium": "^2.1.3",
+    "typescript": "^4.9.5",
+    "vscode-languageclient": "^9.0.1"
+  }
+}

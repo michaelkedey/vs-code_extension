@@ -1,0 +1,50 @@
+{
+    "Create Table": {
+      "prefix": "uddl-create-table",
+      "body": [
+        "create table ${1:TableName} (",
+        "\t${2:Column1} ${3:Type},",
+        "\t${4:Column2} ${5:Type}",
+        ");"
+      ],
+      "description": "UDDL create table snippet"
+    },
+    "Insert Row": {
+      "prefix": "uddl-insert-row",
+      "body": [
+        "insert into ${1:TableName} (",
+        "\t${2:Column1},",
+        "\t${3:Column2}",
+        ") values (",
+        "\t${4:Value1},",
+        "\t${5:Value2}",
+        ");"
+      ],
+      "description": "UDDL insert row snippet"
+    },
+    "Delete Row": {
+      "prefix": "uddl-delete-row",
+      "body": ["delete from ${1:TableName} where ${2:Condition};"],
+      "description": "UDDL delete row snippet"
+    },
+    "Update Row": {
+      "prefix": "uddl-update-row",
+      "body": [
+        "update ${1:TableName} set",
+        "\t${2:Column1} = ${3:Value1},",
+        "\t${4:Column2} = ${5:Value2}",
+        "where ${6:Condition};"
+      ],
+      "description": "UDDL update row snippet"
+    },
+    "Select Statement": {
+      "prefix": "uddl-select",
+      "body": [
+        "select ${1:Column1}, ${2:Column2}",
+        "from ${3:TableName}",
+        "where ${4:Condition};"
+      ],
+      "description": "UDDL select statement snippet"
+    }
+  }
+  

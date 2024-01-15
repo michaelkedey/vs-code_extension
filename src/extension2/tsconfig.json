@@ -1,0 +1,29 @@
+{
+	"compilerOptions": {
+		"module": "CommonJS",
+		"target": "ES2022",
+		"allowJs": true,
+		"outDir": "./out",
+		"lib": [
+			"ES2022"
+		],
+		"sourceMap": true,
+		//"types": ["langium"],
+		"rootDir": "./src",
+    	"noUnusedLocals": true,
+    	"noImplicitReturns": false,
+    	"moduleResolution": "node",
+    	"esModuleInterop": true,
+    	"skipLibCheck": true,
+    	"forceConsistentCasingInFileNames": true,
+		"strict": true   /* enable all strict type-checking options */
+	},
+	"include": [
+		"src/**/*.ts"
+	 ],
+	 "exclude": [
+		"out",
+		"node_modules"
+	 ]
+}
+
